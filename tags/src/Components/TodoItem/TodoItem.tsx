@@ -29,11 +29,9 @@ const TodoItem: React.FC<ITodoItem> = (props) => {
         <>
             <div className='taskWrapp'>
                 <input type='checkbox' checked={complete} onChange={() => toggeleTodo(id)} />
-
-                
                 {isEdit ? (<input className='inputEdit' onChange={(e) => setText(e.target.value)} value={text} />) : (<p>{title} {hash ? <span className='hash' onClick={() => filt(hash)}>{hash}</span> : ''}</p>)}
                 <span className='edit' onClick={() => toggle()}>{isEdit ? <img src='./3.png' alt='edit.png' /> : <img src='./2.png' alt='edit.png' />}</span>
-                <span className='del' onClick={() => removeTodo(id)}><img src='./1.png' alt=''/></span>
+                <span className='del' onClick={() => removeTodo(id)}><img src='./1.png' alt='' /></span>
             </div>
 
         </>

@@ -1,12 +1,18 @@
 import { useState } from 'react'
 import { ITodo, Tags } from '../Types/data'
 import { TodoList } from './TodoList/TodoList'
+import { TodoPopup } from './Popup/TodoPopup'
+import { TodoTags } from './Tags/TododTags'
 import '../App.css'
 
 const App: React.FC = () => {
     const [text, setText] = useState('')
     const [todos, setTodos] = useState<ITodo[]>([])
     const [tag, setTag] = useState<Tags[]>([]);
+    //     const [loc, setLoc]= useState(JSON.parse(localStorage.getItem('loc')) || [] )
+    // useEffect(()=>{
+    //     localStorage.setItem('loc', JSON.stringify(loc))
+    // },[loc])
 
     let a = text.replace('#', ' #').split(' ').filter(v => v.startsWith('#')).join('');
     console.log(a)
@@ -20,6 +26,7 @@ const App: React.FC = () => {
             hash: a,
             complete: false,
         }])
+        // setLoc(todos)
         setText('')
     }
 
@@ -51,6 +58,7 @@ const App: React.FC = () => {
     }
     return (
         <div>
+            <TodoPopup />
             <div className='title'>
                 <h3>Todo-list</h3>
             </div>
@@ -61,8 +69,9 @@ const App: React.FC = () => {
                         <span className='submit' onClick={addTodo}>add</span>
                     </div>
                     <div>
-                        <TodoList items={todos} removeTag={removeTag} tag={tag} filt={filt} handleEdit={handleEdit} removeTodo={removeTodo} toggeleTodo={toggeleTodo} />
+                        <TodoList items={todos} filt={filt} handleEdit={handleEdit} removeTodo={removeTodo} toggeleTodo={toggeleTodo} />
                     </div>
+                    <TodoTags removeTag={removeTag} tag={tag} />
                 </div>
             </div >
         </div>

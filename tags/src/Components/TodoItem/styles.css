@@ -1,24 +1,30 @@
-.taskWrapp{
+.taskWrapp {
     padding: 10px;
     display: flex;
-   justify-content: center;
+    justify-content: center;
     color: #fff;
     align-items: center;
-    height: 20px;;
+    height: 20px;
+    ;
 }
 
-.taskText p{
+.taskText p {
     margin: 0 10px;
 }
-.hash{
+
+.hash {
     color: #D39904;
-    
+    cursor: pointer;
 }
-.edit{
-    margin-left: 10px;
-height: 16px;
-}
-.del{
+
+.edit {
     margin-left: 10px;
     height: 16px;
+    cursor: pointer;
+}
+
+.del {
+    margin-left: 10px;
+    height: 16px;
+    cursor: pointer;
 }

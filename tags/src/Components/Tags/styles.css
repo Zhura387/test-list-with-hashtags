@@ -1,0 +1,21 @@
+.tagWrapper{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    }
+.tagContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tags{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    margin-bottom: 10px;
+}
+.tags span{
+    padding-left: 10px;
+    height: 16px;
+    cursor: pointer;
+}

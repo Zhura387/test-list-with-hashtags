@@ -1,38 +1,43 @@
-body{
+body {
     background-color: black;
 }
 
-.title{
+.title {
     display: flex;
     justify-content: center;
     color: #fff;
 }
 
-.wrapper{
+.wrapper {
     display: flex;
     justify-content: center;
-   
+
 }
-.content{
+
+.content {
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
-.input{
+
+.input {
     align-items: center;
 }
-.submit{
+
+.submit {
     background-color: #737272;
     color: #000;
-    margin-left:10px ;
+    margin-left: 10px;
     padding: 3px;
     font-size: 12px;
+    cursor: pointer;
 }
-input{
+
+input {
     background-color: #959595;
 }
 
-input::placeholder{
+input::placeholder {
     color: #000;
 }
