@@ -1,7 +1,7 @@
 import './styles.css'
-interface TodoPopup {
+interface ITodoPopup {
 }
-const TodoPopup: React.FC<TodoPopup> = () => {
+const TodoPopup: React.FC<ITodoPopup> = () => {
     return (
         <div className='popup'>
             <span><p>After set text with hashtags you can view all tasks with the same tag by clicking on it</p></span>
