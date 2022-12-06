@@ -1,11 +1,12 @@
 import './styles.css'
 import { Tags } from '../../Types/data'
-interface TodoTags {
+interface ITodoTags {
     tag: Tags[]
     removeTag: (id: number) => void
 }
-const TodoTags: React.FC<TodoTags> = (props) => {
+const TodoTags: React.FC<ITodoTags> = (props) => {
     const { tag, removeTag } = props
+   
     return (
         <div className=' tagWrapper'>
             <div className=' tagContent'>

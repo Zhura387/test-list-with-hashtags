@@ -9,10 +9,7 @@ const App: React.FC = () => {
     const [text, setText] = useState('')
     const [todos, setTodos] = useState<ITodo[]>([])
     const [tag, setTag] = useState<Tags[]>([]);
-    //     const [loc, setLoc]= useState(JSON.parse(localStorage.getItem('loc')) || [] )
-    // useEffect(()=>{
-    //     localStorage.setItem('loc', JSON.stringify(loc))
-    // },[loc])
+
 
     let a = text.replace('#', ' #').split(' ').filter(v => v.startsWith('#')).join('');
     console.log(a)
@@ -26,8 +23,8 @@ const App: React.FC = () => {
             hash: a,
             complete: false,
         }])
-        // setLoc(todos)
         setText('')
+       
     }
 
     const handleEdit = (id: number, text: string): void => {
