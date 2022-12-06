@@ -1,5 +1,12 @@
 body {
     background-color: black;
+    margin: 0;
+}
+
+.popup{
+display: flex;
+justify-content: center;
+  
 }
 
 .title {

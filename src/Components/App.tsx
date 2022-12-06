@@ -55,7 +55,11 @@ const App: React.FC = () => {
     }
     return (
         <div>
+            <div className='popup'>
+                <div>
             <TodoPopup />
+            </div>
+            </div>
             <div className='title'>
                 <h3>Todo-list</h3>
             </div>
